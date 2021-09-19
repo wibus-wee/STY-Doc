@@ -15,7 +15,7 @@ features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/d1ee0c6f-5aed-4a45-a507-339a4bfe076c/k7bjsocq_w144_h144.png
     title: 多样性
     desc: 多种风格随意选择
-footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](https://d.umijs.org)
+footer: STY | Copyright © 2021<br />Powered by [dumi](https://d.umijs.org)
 ---
 
 ## 欢迎来到 STY！
@@ -23,6 +23,10 @@ footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](http
 STY 是由Super Typecho组成的，原名叫做 Mix Pro，全名叫做 Super Typecho ，是 Wibus 在离开 Typecho 阵营的最后一个作品
 
 这是史上第一款突破单个主题限制的Typecho主题，它不单单只有一种样式，他有多个开发者细心打造的不同部件，让你即使是同一个主题，也有不同风格的展现。在这里，你能看见各种功能在原生js中是如何实现的，而不是依赖于jQuery
+
+---
+
+## 序言
 
 STY的前身是Mix，在Mix当中我第一次创新了一种特别的部件选择策略，并且实施在主题当中了。在前期这个策略是可以的，开发的时候也没有发现有什么问题。
 

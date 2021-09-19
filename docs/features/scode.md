@@ -3,35 +3,47 @@ title: 短代码
 toc: menu
 ---
 
-## 文章中调用Bilibili小窗（Vditor Render出现问题）
+## 文章中调用Bilibili小窗 <Badge>需要额外配置</Badge>
 
 > ~~此服务依赖`保罗API`服务，也就是说，如果Paul那边挂了，这个功能就没有了~~ 已脱离保罗API依赖
 >
-> 服务详情：https://api.paugram.com/help/bili
+> ~~服务详情：https://api.paugram.com/help/bili~~
+
+如果你想要使用此功能，请您前往后台->`外观设置`中找到`开发者设置`->`实验功能`中输入以下内容
+
+```json
+{
+  "bframe": "false",
+}
+```
+
+这个选项添加了后会让Vditor Render不自动解析哔哩哔哩，随之而他就不会自动把有bilibili的链接转化为iframe，之后继续享用此短代码吧！
+
+<Alert type="error">
+没有设置这个的千万不要用！！！不然排版全乱了！！
+</Alert>
 
 ```md
-[bilibili id="" style=""]
+[bilibili v="" id=""]
 
-[bilibili id="BV1cb4y1k7hJ" style="gray"]
+[bilibili v="a/b" id="BV1cb4y1k7hJ"]
 ```
 
 这是调用bilibili小窗的短代码 与哔哩哔哩那边引入的有小许不同，这个是一个介绍小块，点击之后会跳转
+
+- 参数：`v`
+
+  类型：`String` 字符串
+
+  说明：选择要填写的是AV还是BV，`默认为BV`
 
 - 参数： `id`
 
   类型：`String` 字符串
 
-  说明：填写BV号
+  说明：填写AV/BV号，取决于你第一个选项
 
   举例：`id="BV1cb4y1k7hJ"`
-
-- 参数：`style`
-
-  类型：`String` 字符串
-
-  说明：背景颜色，可选择：`gray`, `white`,`black`
-
-  举例：`style="gray"`
 
 ## 文章中调用进度条
 
@@ -112,9 +124,7 @@ toc: menu
 
 标签包裹住你想要隐藏的内容，游客必须先回复后才能查看隐藏内容。
 
-## 收缩框
-
-> 出现问题
+## 文章中调用收缩框
 
 示例代码：
 
@@ -128,7 +138,7 @@ toc: menu
 
 不写`status` 属性，默认是展开内容的。
 
-## 标签卡
+## 文章中调用标签卡
 
 示例代码：
 
@@ -147,7 +157,7 @@ toc: menu
 [tab name="标签页 2" color:"#000" font-weight="bold"]高级内容文本示例[/tab]
 ```
 
-## 相册
+## 文章中调用相册
 
 > type="photos" 此选项无效
 
@@ -163,7 +173,7 @@ toc: menu
 
 - 图集：**增加type="photos" 则album下的图片排成一行，并根据图片的长高比自动排列**
 
-## 视频
+## 文章中调用视频
 
 直接在输入框中输入视频的地址即可，一般以`.mp4`结尾的资源地址。
 
@@ -178,7 +188,7 @@ toc: menu
 
 相关问题：默认的播放器比较简单，复杂需求可以尝试[DPlayer-Typecho](http://github.com/volio/DPlayer-for-typecho)，主题已经内置适配代码。
 
-## 文章卡片
+## 文章中调用文章卡片
 
 ```markdown
 [post cid="1" /]
@@ -188,7 +198,7 @@ toc: menu
 - `cid`：必填，是文章的唯一编号，在后台的编辑文章的地址可以看到，比如`http://localhost/build/admin/write-post.php?cid=23`,值为23
 - `cover`：可选项，调用文章显示的封面，如果不填则默认显示随机缩略图。
 
-## 外链卡片
+## 文章中调用外链卡片
 
 ![](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210724220433.jpg)
 
@@ -201,7 +211,7 @@ toc: menu
 - `intro`：（可选）外链网站的简介/介绍
 - `cover`：（选填）外链网站的介绍图片地址
 
-## 高亮提示文本
+## 文章中调用高亮提示文本
 
 ```markdown
 [scode type="share"]这是灰色的短代码框，常用来引用资料什么的[/scode]
@@ -213,7 +223,7 @@ toc: menu
 
 ![](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210724215721.jpg)
 
-## 按钮
+## 文章中调用按钮
 
 STY支持以下类型的按钮：
 
@@ -253,7 +263,7 @@ STY支持以下类型的按钮：
 [button color="success" icon="glyphicon glyphicon-send" url="mailto:wibus@qq.com"]wibus@qq.com[/button]
 ```
 
-## 第二版按钮
+## 文章中调用第二版按钮
 
 - `url`: 跳转链接
 
@@ -261,7 +271,7 @@ STY支持以下类型的按钮：
 [btn url="https://iucky.cn"]秉性之松[/btn]
 ```
 
-## colorful-btn
+## 文章中调用colorful-btn
 
 - `type`：按钮样式
     - color
@@ -284,3 +294,99 @@ STY支持以下类型的按钮：
 ```markdown
 [colorful-btn url="跳转地址" type="color"]内容[/colorful-btn]
 ```
+
+## 文章中调用多彩Badge
+
+<span class="default-badge">需要额外配置</span>
+<span class="default-badge default-badge-dark">需要额外配置</span>
+<span class="default-badge default-badge-info">需要额外配置</span>
+<span class="default-badge default-badge-primary">需要额外配置</span>
+<span class="default-badge default-badge-danger">需要额外配置</span>
+<span class="default-badge default-badge-success">需要额外配置</span>
+<span class="default-badge default-badge-warning">需要额外配置</span>
+
+```markdown
+[badge]默认白色文字[/badge]
+[badge type="primary"]紫色文字[/badge]
+[badge type="info"]蓝色文字[/badge]
+[badge type="warning"]黄色文字[/badge]
+[badge type="danger"]红色文字[/badge]
+[badge type="success"]绿色文字[/badge]
+[badge type="dark"]黑色文字[/badge]
+```
+
+## 文章中调用计划表
+
+```markdown
+[goal title="2021的小目标"]
+[item check="true"] 每天早睡 [/item]
+[item check="false"] 每天早起 [/item]
+[item progress="50%"] 阅读10本书 [/item]
+[item start="2021-01-02" end="2021-10-1"] 每天锻炼30分钟 [/item]
+[/goal]
+```
+
+计划表中包含了三种类型的任务：
+
+- check类型，该类型任务只有两种状态，完成和未完成
+- progress，该类型任务可以显示任务执行的进度，需要手动填写进度
+- start、end，该类型任务设置一个起始时间和终止时间，进度会根据当前时间自动更新进度
+  - 时间格式：**必须是正确的时间格式**，比如`2021-01-02 12:00` ，也可以只写日期`2021-01-02`
+
+## 文章中调用时间线
+
+```md
+[timeline title="2020大事记" start="梦开始的地方" end="新的一年开始"]
+[item date="2020-1-20"] 武汉封城，疫情让一起变得慌乱起来 [/item]
+[item date="2020-3-20"] 开始远程办公，慢慢有序起来[/item]
+[item]生活变得好起来了[/item]
+[item date="2020-10-1"] 国庆节去哈尔滨旅行，和老同学见面[/item]
+[/timeline]
+```
+
+timeline 属性列表：
+
+- `random`，可选项，默认为true，可选值为true、false，true表示时间线每一条会使用随机的色彩
+
+item 属性列表：
+
+- `date`：可选项，默认不显示时间，可选值：
+  - 一个日期文字，实际上可以填写任何类型文字（不要太长）
+
+
+<style>
+  .default-badge {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 1px 7px;
+    /* color: #fff; */
+    font-size: 13px;
+    line-height: 20px;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 6px 16px -2px rgb(0 0 0 / 6%);
+    border-radius: 1px;
+    vertical-align: top;
+}
+[class*="default-badge-"]{
+    color: #fff;
+}
+.default-badge-info{
+    background: #4569d4;
+}
+.default-badge-primary{
+    background: purple;
+}
+.default-badge-danger{
+    background: rgb(184, 13, 13)
+}
+.default-badge-success{
+    background: rgb(6, 110, 6)
+}
+.default-badge-dark{
+    background: #222222
+}
+.default-badge-warning{
+    background: rgb(218, 218, 0);
+    color: #000;
+}
+</style>

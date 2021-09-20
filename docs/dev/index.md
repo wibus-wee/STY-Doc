@@ -15,7 +15,7 @@ nav:
 
 ```json
 {
-  "bframe": "false", //这样就能关闭此功能了
+  "bframe":"false"
 }
 ```
 

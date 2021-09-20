@@ -2,7 +2,7 @@
 title: Velax 部件
 toc: menu
 nav:
-    title: Velax 部件
+    title: 各部件设置
 ---
 
 ## 头部大字设置

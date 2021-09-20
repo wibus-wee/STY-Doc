@@ -1,8 +1,6 @@
 ---
 title: SBS 部件
 toc: menu
-nav:
-    title: SBS 部件
 ---
 
 ## 头部大图设置

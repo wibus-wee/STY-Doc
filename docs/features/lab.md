@@ -1,9 +1,6 @@
 ---
 title: 实验功能
 toc: menu
-nav:
-    title: 实验功能
-    order: 4
 ---
 
 实验功能是用来方便快捷地启动与关闭一些功能的，通过此选项可以控制一些如Vditor Render等设置

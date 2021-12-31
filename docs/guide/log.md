@@ -3,7 +3,45 @@ title: 更新日志
 toc: menu
 ---
 
-## 2021-11-21 更新至 v2.6.0 <Badge>最新版</Badge>
+## 2021-12-31 更新至 v2.7.0 <Badge>最新版</Badge>
+
+1. 修复 SBS 文章/页面显示头部样式设置选项丢失问题
+2. 新增维护功能，基于 Disable-Typecho-Frontend
+3. 修复 EmojiHelper 的问题，接下来可以在主题内即可完成 emoji 改造啦！
+4. 优化 SBS 在夜间模式的表现
+5. 修复 DEV_JSON 值为空时出错的问题
+6. 新增排版功能：blockquote
+7. 优化 admin functions
+8. 新增 PHP 版本参数提示
+9. 修改主题文件夹结构，优化编写策略
+10. 根据 PHP Notice 优化
+11. 新增代码高亮样式
+12. 优化 Mac 代码高亮设置
+13. 新增 icarus 部件！
+14. 修改 vditor Render 懒加载图片设置
+15. 优化默认 blockquote 样式
+16. 防止非中文机器进入评论区
+17. 为 dev 版本新增特别指示
+18. 修复 owo.json 文件错误的问题
+19. 添加评论区调用 QQ 头像功能
+20. 删除了 Vditor Render 渲染后出现的 console
+21. 为评论区添加锚点
+22. 紧急修复由于 jsd 故障所导致的资源问题
+23. 修复 SAdmin 引入路径问题
+24. 优化 Velax 部件的部分样式
+25. Velax 部件新增前台展示博文风格功能
+26. 更新 Vditor to 3.8.10
+27. 站点提交接口改进为一次性全部提交
+28. 适配 Typecho 1.2 rc-1
+29. 修复因 Typecho 1.2 改变 PageNavigator 所引发的置顶失效问题
+30. 为 1.2 rc-1 修复构建索引时的错误
+31. 修复判断 Typecho 版本错误
+32. 优化 STYCache 内置插件
+33. 修复当选择 Typecho Render 时 velax 部件的问题
+34. vditor 本地化
+35. vditor 渲染时加入友好提示
+
+## 2021-11-21 更新至 v2.6.0
 
 1. **修复**SBS 文章/页面显示头部样式设置选项丢失问题
 2. **新增**维护功能，启动后前台将会变为维护中状态

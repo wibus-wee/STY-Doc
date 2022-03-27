@@ -2,23 +2,23 @@
 title: 开发指南
 toc: menu
 nav:
-    title: 开发指南
-    order: 5
+  title: 开发指南
+  order: 5
 ---
 
 # 开发指南
 
-此节将带你了解STY的主题策略，并且如何写出一个符合STY规范*的STY部件. `STY规范`指一个STY主题部件必须要做到的要求
+此节将带你了解 STY 的主题策略，并且如何写出一个符合 STY 规范\*的 STY 部件. `STY规范`指一个 STY 主题部件必须要做到的要求
 
-相对于Typecho主题的开发，`STY部件`的开发可以说和Typecho主题开发`大同小异`，但是STY开发会`更加便捷`。不需要单独写函数来实现功能（STY内部`全部内置`）不需要`优化`head中的`SEO`，当然部件的开发的SEO只能靠你自己了
+相对于 Typecho 主题的开发，`STY部件`的开发可以说和 Typecho 主题开发`大同小异`，但是 STY 开发会`更加便捷`。不需要单独写函数来实现功能（STY 内部`全部内置`）不需要`优化`head 中的`SEO`，当然部件的开发的 SEO 只能靠你自己了
 
-<img src="https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210921072345.png" style="zoom: 50%">
+<img src="https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921072345.png" style="zoom: 50%">
 
-这是`RText`的header文件，如果你会看的话，你应该能看出我想说啥了。不说，哎我就是玩，立马开始写指南吧（（
+这是`RText`的 header 文件，如果你会看的话，你应该能看出我想说啥了。不说，哎我就是玩，立马开始写指南吧（（
 
-## 0 STY规范
+## 0 STY 规范
 
-STY规范听起来很**高大上**，但其实并不哈哈哈，简单来讲就是你的部件必须要支持以下的东西（或者说必须要有以下的文件
+STY 规范听起来很**高大上**，但其实并不哈哈哈，简单来讲就是你的部件必须要支持以下的东西（或者说必须要有以下的文件
 
 - 头部部件
 - 轮播图部件
@@ -39,17 +39,17 @@ STY规范听起来很**高大上**，但其实并不哈哈哈，简单来讲就�
 └── velax_post.php -- 文章
 ```
 
-这个是STY部件中的`Velax部件`，如果你不知道Velax部件处在整个主题的地方的话，那我告诉你（相对路径`themes/velax`
+这个是 STY 部件中的`Velax部件`，如果你不知道 Velax 部件处在整个主题的地方的话，那我告诉你（相对路径`themes/velax`
 
-## 1  完成基本页面
+## 1 完成基本页面
 
-要写一份STY部件，首先你必须要做好一个`基本页面`，最好先用`HTML`写好，等下写部件就只需要复制黏贴改一点点东西就好，在此处我用`weeWhite`演示
+要写一份 STY 部件，首先你必须要做好一个`基本页面`，最好先用`HTML`写好，等下写部件就只需要复制黏贴改一点点东西就好，在此处我用`weeWhite`演示
 
-## 2  替换HTML变为输出函数
+## 2 替换 HTML 变为输出函数
 
 ### 首页
 
-首页的weewhite是这样的：
+首页的 weewhite 是这样的：
 
 ```html
 <header id="navbar" class="header shadow-2x">
@@ -99,7 +99,7 @@ STY规范听起来很**高大上**，但其实并不哈哈哈，简单来讲就�
                 <a href="首页链接">首页</a>
             </li>
             <li class="menu-item">
-                <a href="分类链接">分类名字</a> 
+                <a href="分类链接">分类名字</a>
             </li>
         </ul>
     </div>
@@ -147,7 +147,7 @@ STY规范听起来很**高大上**，但其实并不哈哈哈，简单来讲就�
                 </div>
                 <ul>
                 <li class="cat-item">
-                    <a href="分类链接">分类名字</a> </li> 
+                    <a href="分类链接">分类名字</a> </li>
                 </ul>
             </div>
         </aside>
@@ -155,24 +155,23 @@ STY规范听起来很**高大上**，但其实并不哈哈哈，简单来讲就�
     <div class="bg-overlay"> </div>
 ```
 
-虽然严格意义上来讲这个不是header，但是依然可以放在一起 
+虽然严格意义上来讲这个不是 header，但是依然可以放在一起
 
-<img src="https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210921073511.png" style="zoom: 50%">
+<img src="https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921073511.png" style="zoom: 50%">
 
 可以看到在设计的时候我是已经做了一些备注了（譬如说`分类名字`是要输出在哪里的），接下来要做的只有替换函数了
 
-|需要替换的文字|替换为|
-|:--|:--|
-|首页链接|`<?php Helper::options()->siteUrl()?>`|
-|网页标题|`<?php $this->options->title(); ?>`|
-|![](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210921074347.png)|![](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210921074414.png)|
-|![](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210921074737.png)|![](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210921074837.png)|
-|![](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210921074942.png)|![](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210921075002.png)|
-|![](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210921075051.png)|![](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210921075110.png)|
-|![](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210921075128.png)|![](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210921075143.png)|
+| 需要替换的文字                                                               | 替换为                                                                       |
+| :--------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |
+| 首页链接                                                                     | `<?php Helper::options()->siteUrl()?>`                                       |
+| 网页标题                                                                     | `<?php $this->options->title(); ?>`                                          |
+| ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921074347.png) | ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921074414.png) |
+| ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921074737.png) | ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921074837.png) |
+| ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921074942.png) | ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921075002.png) |
+| ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921075051.png) | ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921075110.png) |
+| ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921075128.png) | ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921075143.png) |
 
-
-因为`页面`不止一个，因此我们还需要使用while循环输出，使用`$this->widget('Widget_Contents_Page_List')->to($pages);`得到全部pages，使用`while($pages->next())`开始循环输出，最后用`endwhile`来结束这段循环
+因为`页面`不止一个，因此我们还需要使用 while 循环输出，使用`$this->widget('Widget_Contents_Page_List')->to($pages);`得到全部 pages，使用`while($pages->next())`开始循环输出，最后用`endwhile`来结束这段循环
 
 <Alert type="error">
     标签分类原理相同，但是一定要注意要设计好以及放好white的位置，不然会出现套错地方了

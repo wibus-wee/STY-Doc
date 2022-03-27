@@ -2,24 +2,24 @@
 title: Velax 部件
 toc: menu
 nav:
-    title: 各部件设置
+  title: 各部件设置
 ---
 
 ## 头部大字设置
 
-头部顶部几个大字的设置，支持HTML书写，比如说：`<span>HELLO WORLD</span>`
+头部顶部几个大字的设置，支持 HTML 书写，比如说：`<span>HELLO WORLD</span>`
 
 ## 头部大图设置
 
-头部背景图片，填写URL
+头部背景图片，填写 URL
 
 ## 头部大图模糊
 
-若选择了添加，则会自动添加CSS
+若选择了添加，则会自动添加 CSS
 
 ```css
-#maxer-header .header-content{
-    backdrop-filter: blur(10px);
+#maxer-header .header-content {
+  backdrop-filter: blur(10px);
 }
 ```
 
@@ -47,7 +47,7 @@ nav:
 
 - title: 文章标题
 - link: 文章的地址
-- cover: 文章图片地址，比例建议8：3，不要太小，否则显示的不清楚
+- cover: 文章图片地址，比例建议 8：3，不要太小，否则显示的不清楚
 - desc: 简单描述（不要太长）
 
 !> 最后一个`}`后面不要加上英文逗号
@@ -56,7 +56,7 @@ nav:
 
 就是这样的一个东西
 
-![](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210720175836.jpg)
+![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210720175836.jpg)
 
 ## 头部高度
 

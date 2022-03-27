@@ -3,9 +3,9 @@ title: 短代码
 toc: menu
 ---
 
-## 文章中调用Bilibili小窗 <Badge>需要额外配置</Badge>
+## 文章中调用 Bilibili 小窗 <Badge>需要额外配置</Badge>
 
-> ~~此服务依赖`保罗API`服务，也就是说，如果Paul那边挂了，这个功能就没有了~~ 已脱离保罗API依赖
+> ~~此服务依赖`保罗API`服务，也就是说，如果 Paul 那边挂了，这个功能就没有了~~ 已脱离保罗 API 依赖
 >
 > ~~服务详情：https://api.paugram.com/help/bili~~
 
@@ -13,11 +13,11 @@ toc: menu
 
 ```json
 {
-  "bframe": "false",
+  "bframe": "false"
 }
 ```
 
-这个选项添加了后会让Vditor Render不自动解析哔哩哔哩，随之而他就不会自动把有bilibili的链接转化为iframe，之后继续享用此短代码吧！
+这个选项添加了后会让 Vditor Render 不自动解析哔哩哔哩，随之而他就不会自动把有 bilibili 的链接转化为 iframe，之后继续享用此短代码吧！
 
 <Alert type="error">
 没有设置这个的千万不要用！！！不然排版全乱了！！
@@ -29,19 +29,19 @@ toc: menu
 [bilibili v="a/b" id="BV1cb4y1k7hJ"]
 ```
 
-这是调用bilibili小窗的短代码 与哔哩哔哩那边引入的有小许不同，这个是一个介绍小块，点击之后会跳转
+这是调用 bilibili 小窗的短代码 与哔哩哔哩那边引入的有小许不同，这个是一个介绍小块，点击之后会跳转
 
 - 参数：`v`
 
   类型：`String` 字符串
 
-  说明：选择要填写的是AV还是BV，`默认为BV`
+  说明：选择要填写的是 AV 还是 BV，`默认为BV`
 
 - 参数： `id`
 
   类型：`String` 字符串
 
-  说明：填写AV/BV号，取决于你第一个选项
+  说明：填写 AV/BV 号，取决于你第一个选项
 
   举例：`id="BV1cb4y1k7hJ"`
 
@@ -94,14 +94,14 @@ toc: menu
 ## 文章内调用视频播放器
 
 ```md
-[vplayer pic="" url=""  /]
+[vplayer pic="" url="" /]
 
 [vplayer pic="https:\/\/gitee.com\/wibus/blog-assets-goo\/raw\/master\/asset-pic\/KPyTCARHBzpxJ46.jpg" url="https:\/\/a.smartont.net:8445\/fs?fid=Szo7J9FX2MCBDjTyetR057eZV4gXEi\/pyngn1uCfocblwOzKPeunuCWBvKkdo\/ZS&filename=%E7%9F%A5%E4%B9%8E%E7%AD%94%E6%A1%88%E5%A5%87%E9%81%87%E5%A4%9C.mp4" /]
 ```
 
-| 参数 | 类型                                                | 备注     |
-| :--- | :-------------------------------------------------- | -------- |
-| pic  | string **(optional)**  | 预览图   |
+| 参数 | 类型                  | 备注     |
+| :--- | :-------------------- | -------- |
+| pic  | string **(optional)** | 预览图   |
 | url  | string **(required)** | 视频链接 |
 
 ## 部分内容登录可见
@@ -149,9 +149,9 @@ toc: menu
 [/tabs]
 ```
 
-每个tab 都必须包括`name`属性，只能有一个tab 添加`active`属性，表示默认显示该tab的内容。
+每个 tab 都必须包括`name`属性，只能有一个 tab 添加`active`属性，表示默认显示该 tab 的内容。
 
-此外tab支持更多css的属性，比如颜色，字体粗细等：
+此外 tab 支持更多 css 的属性，比如颜色，字体粗细等：
 
 ```markdown
 [tab name="标签页 2" color:"#000" font-weight="bold"]高级内容文本示例[/tab]
@@ -163,15 +163,15 @@ toc: menu
 
 ```md
 [album]
-[普通的图片插入，支持markdown语法和html语法，混合也可以]
+[普通的图片插入，支持 markdown 语法和 html 语法，混合也可以]
 [/album]
 
 [album type="photos"]
-[普通的图片插入，支持markdown语法和html语法，混合也可以]
+[普通的图片插入，支持 markdown 语法和 html 语法，混合也可以]
 [/album]
 ```
 
-- 图集：**增加type="photos" 则album下的图片排成一行，并根据图片的长高比自动排列**
+- 图集：**增加 type="photos" 则 album 下的图片排成一行，并根据图片的长高比自动排列**
 
 ## 文章中调用视频
 
@@ -195,12 +195,12 @@ toc: menu
 [post cid="1" cover="http:\/\/localhost\/build\/usr\/themes\/handsome\/usr\/img\/sj\/6.jpg"/]
 ```
 
-- `cid`：必填，是文章的唯一编号，在后台的编辑文章的地址可以看到，比如`http://localhost/build/admin/write-post.php?cid=23`,值为23
+- `cid`：必填，是文章的唯一编号，在后台的编辑文章的地址可以看到，比如`http://localhost/build/admin/write-post.php?cid=23`,值为 23
 - `cover`：可选项，调用文章显示的封面，如果不填则默认显示随机缩略图。
 
 ## 文章中调用外链卡片
 
-![](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210724220433.jpg)
+![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210724220433.jpg)
 
 ```
 [post url="https:\/\/iucky.cn" title="秉性之松" intro="一个个人博客" cover="http://iucky.cn/img/xxx.jpg" /]
@@ -221,11 +221,11 @@ toc: menu
 [scode type="green"]这是绿色的短代码框，显示一些推荐信息。[/scode]
 ```
 
-![](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210724215721.jpg)
+![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210724215721.jpg)
 
 ## 文章中调用按钮
 
-STY支持以下类型的按钮：
+STY 支持以下类型的按钮：
 
 - 矩形文字按钮
 - 椭圆形文字按钮
@@ -243,7 +243,7 @@ STY支持以下类型的按钮：
 
 - `type`：选填，不填默认为矩形按钮。可选值：
   - `round`：椭圆形按钮
-- `color`： 选填，不填默认为success（绿色），可选值：
+- `color`： 选填，不填默认为 success（绿色），可选值：
   - `light`：白色
   - `info`：蓝色
   - `dark`：深色
@@ -258,7 +258,7 @@ STY支持以下类型的按钮：
 举例：
 
 ```markdown
-[button color="danger" icon="fontello fontello-gratipay" url="http:\/\/wpa.qq.com\/msgrd?v=3&uin=1596355173&site=qq&menu=yes"]点击QQ咨询购买（√推荐）[/button]
+[button color="danger" icon="fontello fontello-gratipay" url="http:\/\/wpa.qq.com\/msgrd?v=3&uin=1596355173&site=qq&menu=yes"]点击 QQ 咨询购买（√ 推荐）[/button]
 
 [button color="success" icon="glyphicon glyphicon-send" url="mailto:wibus@qq.com"]wibus@qq.com[/button]
 ```
@@ -271,31 +271,31 @@ STY支持以下类型的按钮：
 [btn url="https://iucky.cn"]秉性之松[/btn]
 ```
 
-## 文章中调用colorful-btn
+## 文章中调用 colorful-btn
 
 - `type`：按钮样式
-    - color
-    - hollow
-    - blue-parcel
-    - generic
-    - technological
-    - concavoconvex
-    - red-parcel
-    - pink-parcel
-    - rotating
-    - expansile
-    - ephemeral-shining
-    - downfolded
-    - upfolded
-    - left- -folded
-    - right-folded
+  - color
+  - hollow
+  - blue-parcel
+  - generic
+  - technological
+  - concavoconvex
+  - red-parcel
+  - pink-parcel
+  - rotating
+  - expansile
+  - ephemeral-shining
+  - downfolded
+  - upfolded
+  - left- -folded
+  - right-folded
 - `url`：跳转地址
 
 ```markdown
 [colorful-btn url="跳转地址" type="color"]内容[/colorful-btn]
 ```
 
-## 文章中调用多彩Badge
+## 文章中调用多彩 Badge
 
 <span class="default-badge">需要额外配置</span>
 <span class="default-badge default-badge-dark">需要额外配置</span>
@@ -318,17 +318,17 @@ STY支持以下类型的按钮：
 ## 文章中调用计划表
 
 ```markdown
-[goal title="2021的小目标"]
+[goal title="2021 的小目标"]
 [item check="true"] 每天早睡 [/item]
 [item check="false"] 每天早起 [/item]
-[item progress="50%"] 阅读10本书 [/item]
-[item start="2021-01-02" end="2021-10-1"] 每天锻炼30分钟 [/item]
+[item progress="50%"] 阅读 10 本书 [/item]
+[item start="2021-01-02" end="2021-10-1"] 每天锻炼 30 分钟 [/item]
 [/goal]
 ```
 
 计划表中包含了三种类型的任务：
 
-- check类型，该类型任务只有两种状态，完成和未完成
+- check 类型，该类型任务只有两种状态，完成和未完成
 - progress，该类型任务可以显示任务执行的进度，需要手动填写进度
 - start、end，该类型任务设置一个起始时间和终止时间，进度会根据当前时间自动更新进度
   - 时间格式：**必须是正确的时间格式**，比如`2021-01-02 12:00` ，也可以只写日期`2021-01-02`
@@ -336,7 +336,7 @@ STY支持以下类型的按钮：
 ## 文章中调用时间线
 
 ```md
-[timeline title="2020大事记" start="梦开始的地方" end="新的一年开始"]
+[timeline title="2020 大事记" start="梦开始的地方" end="新的一年开始"]
 [item date="2020-1-20"] 武汉封城，疫情让一起变得慌乱起来 [/item]
 [item date="2020-3-20"] 开始远程办公，慢慢有序起来[/item]
 [item]生活变得好起来了[/item]
@@ -346,13 +346,12 @@ STY支持以下类型的按钮：
 
 timeline 属性列表：
 
-- `random`，可选项，默认为true，可选值为true、false，true表示时间线每一条会使用随机的色彩
+- `random`，可选项，默认为 true，可选值为 true、false，true 表示时间线每一条会使用随机的色彩
 
 item 属性列表：
 
 - `date`：可选项，默认不显示时间，可选值：
   - 一个日期文字，实际上可以填写任何类型文字（不要太长）
-
 
 <style>
   .default-badge {

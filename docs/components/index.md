@@ -56,7 +56,7 @@ nav:
 
 就是这样的一个东西
 
-![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210720175836.jpg)
+![](https://cdn.my-api.cn/user/w/asset-pic-gitee/20210720175836.jpg)
 
 ## 头部高度
 

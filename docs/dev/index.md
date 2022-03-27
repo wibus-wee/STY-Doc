@@ -12,7 +12,7 @@ nav:
 
 相对于 Typecho 主题的开发，`STY部件`的开发可以说和 Typecho 主题开发`大同小异`，但是 STY 开发会`更加便捷`。不需要单独写函数来实现功能（STY 内部`全部内置`）不需要`优化`head 中的`SEO`，当然部件的开发的 SEO 只能靠你自己了
 
-<img src="https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921072345.png" style="zoom: 50%">
+<img src="https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921072345.png" style="zoom: 50%">
 
 这是`RText`的 header 文件，如果你会看的话，你应该能看出我想说啥了。不说，哎我就是玩，立马开始写指南吧（（
 
@@ -157,19 +157,19 @@ STY 规范听起来很**高大上**，但其实并不哈哈哈，简单来讲就
 
 虽然严格意义上来讲这个不是 header，但是依然可以放在一起
 
-<img src="https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921073511.png" style="zoom: 50%">
+<img src="https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921073511.png" style="zoom: 50%">
 
 可以看到在设计的时候我是已经做了一些备注了（譬如说`分类名字`是要输出在哪里的），接下来要做的只有替换函数了
 
-| 需要替换的文字                                                               | 替换为                                                                       |
-| :--------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |
-| 首页链接                                                                     | `<?php Helper::options()->siteUrl()?>`                                       |
-| 网页标题                                                                     | `<?php $this->options->title(); ?>`                                          |
-| ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921074347.png) | ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921074414.png) |
-| ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921074737.png) | ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921074837.png) |
-| ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921074942.png) | ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921075002.png) |
-| ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921075051.png) | ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921075110.png) |
-| ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921075128.png) | ![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921075143.png) |
+| 需要替换的文字                                                       | 替换为                                                               |
+| :------------------------------------------------------------------- | :------------------------------------------------------------------- |
+| 首页链接                                                             | `<?php Helper::options()->siteUrl()?>`                               |
+| 网页标题                                                             | `<?php $this->options->title(); ?>`                                  |
+| ![](https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921074347.png) | ![](https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921074414.png) |
+| ![](https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921074737.png) | ![](https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921074837.png) |
+| ![](https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921074942.png) | ![](https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921075002.png) |
+| ![](https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921075051.png) | ![](https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921075110.png) |
+| ![](https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921075128.png) | ![](https://cdn.my-api.cn/user/w/asset-pic-gitee/20210921075143.png) |
 
 因为`页面`不止一个，因此我们还需要使用 while 循环输出，使用`$this->widget('Widget_Contents_Page_List')->to($pages);`得到全部 pages，使用`while($pages->next())`开始循环输出，最后用`endwhile`来结束这段循环
 

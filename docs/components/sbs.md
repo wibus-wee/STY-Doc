@@ -9,7 +9,7 @@ toc: menu
 
 ## 右侧栏 Essays 设置
 
-![截屏2021-07-30 下午8.38.13](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210730203815.png)
+![截屏2021-07-30 下午8.38.13](https://cdn.my-api.cn/user/w/asset-pic-gitee/20210730203815.png)
 
 就是这个东西，支持 HTML，也可以直接纯文本
 
@@ -22,7 +22,7 @@ toc: menu
 <li class="item"><a href="https://iucky.cn">iucky.cn</a></li>
 ```
 
-![截屏2021-07-30 下午8.39.55](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210730203958.png)
+![截屏2021-07-30 下午8.39.55](https://cdn.my-api.cn/user/w/asset-pic-gitee/20210730203958.png)
 
 ## 左侧列表下部按钮设置
 
@@ -54,4 +54,4 @@ toc: menu
 </div>
 ```
 
-![截屏2021-07-30 下午8.40.12](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210730204014.png)
+![截屏2021-07-30 下午8.40.12](https://cdn.my-api.cn/user/w/asset-pic-gitee/20210730204014.png)

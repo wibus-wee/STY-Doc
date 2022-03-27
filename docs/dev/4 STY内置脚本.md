@@ -4,7 +4,7 @@
 
 这个脚本一直随着 STY 打包在主题根目录中：`create`
 
-![image-20220102161639946](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20220102161645.png)
+![image-20220102161639946](https://cdn.my-api.cn/user/w/asset-pic-gitee/20220102161645.png)
 
 那就讲下该咋用吧
 
@@ -37,7 +37,7 @@
 
 接下来你需要进入`global.php`了，或者**帮手**将会帮你**自动打开**
 
-![image-20220102161809558](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20220102161809.png)
+![image-20220102161809558](https://cdn.my-api.cn/user/w/asset-pic-gitee/20220102161809.png)
 
 ## 需要注意的
 

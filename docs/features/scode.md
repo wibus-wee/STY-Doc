@@ -200,7 +200,7 @@ toc: menu
 
 ## 文章中调用外链卡片
 
-![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210724220433.jpg)
+![](https://cdn.my-api.cn/user/w/asset-pic-gitee/20210724220433.jpg)
 
 ```
 [post url="https:\/\/iucky.cn" title="秉性之松" intro="一个个人博客" cover="http://iucky.cn/img/xxx.jpg" /]
@@ -221,7 +221,7 @@ toc: menu
 [scode type="green"]这是绿色的短代码框，显示一些推荐信息。[/scode]
 ```
 
-![](https://https://cdn.my-api.cn/user/w/asset-pic-gitee/20210724215721.jpg)
+![](https://cdn.my-api.cn/user/w/asset-pic-gitee/20210724215721.jpg)
 
 ## 文章中调用按钮
 
